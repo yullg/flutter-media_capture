@@ -1,0 +1,27 @@
+plugins {
+    id "com.android.library"
+    id "org.jetbrains.kotlin.android"
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+kotlin {
+    jvmToolchain 17
+}
+
+android {
+    namespace "com.yullg.flutter.media_capture"
+    compileSdk 34
+
+    defaultConfig {
+        minSdkVersion 21
+    }
+}
+
+dependencies {
+    implementation "androidx.core:core-ktx:1.13.1"
+}

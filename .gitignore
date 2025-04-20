@@ -1,0 +1,12 @@
+/*
+!/android/
+!/example/
+!/ios/
+!/lib/
+!/.gitignore
+!/.metadata
+!/analysis_options.yaml
+!/CHANGELOG.md
+!/LICENSE
+!/pubspec.yaml
+!/README.md
