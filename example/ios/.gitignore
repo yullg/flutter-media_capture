@@ -6,6 +6,7 @@
 !/Flutter/
 !/Runner/
 !/Runner.xcodeproj/
+!/MediaCaptureExampleBroadcastExtension/
 
 /Flutter/Flutter.podspec
 /Flutter/flutter_export_environment.sh
