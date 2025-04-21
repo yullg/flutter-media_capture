@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:media_capture/media_capture.dart';
-import 'package:scaffold/scaffold.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,13 +13,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
-
-  @override
-  void initState() {
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -30,11 +22,14 @@ class _MyAppState extends State<MyApp> {
         ),
         body: ListView(
           children: [
-            EasyListTile(
-              nameText: "IosBroadcastActivityPlugin.start",
+            ListTile(
+              title: const Text("Start"),
               onTap: () {
-                IosBroadcastActivityPlugin.start().catchError((e, s) {
-                  DefaultLogger().error(null, e, s);
+                IosBroadcastActivityPlugin.start(
+                        preferredExtension:
+                            "com.yullg.flutter.mediaCaptureExample.BroadcastExtension")
+                    .catchError((e) {
+                  print(e.toString());
                 });
               },
             ),

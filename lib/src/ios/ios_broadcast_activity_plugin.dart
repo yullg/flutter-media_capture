@@ -5,10 +5,10 @@ class IosBroadcastActivityPlugin {
       "com.yullg.flutter.media_capture/broadcast_activity_method");
 
   static Future<void> start({
-    String? withPreferredExtension,
+    String? preferredExtension,
   }) async {
     await _methodChannel.invokeMethod("start", {
-      "withPreferredExtension": withPreferredExtension,
+      "preferredExtension": preferredExtension,
     });
   }
 }
